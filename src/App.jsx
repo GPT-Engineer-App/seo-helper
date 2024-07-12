@@ -29,7 +29,7 @@ const App = () => {
         <Router>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Index />} />
+              <Route index element={<SeoOptimization />} />
               <Route path="seo-optimization" element={<SeoOptimization />} />
               {/* Add more routes here as needed */}
             </Route>

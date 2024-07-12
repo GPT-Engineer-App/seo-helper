@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
-import { Toaster, toast } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/sonner";
 
 const SeoOptimization = () => {
   const [general, setGeneral] = useState({ title: "", description: "" });
@@ -36,27 +36,27 @@ const SeoOptimization = () => {
 
   const validateFields = () => {
     if (general.title.length > 66) {
-      toast.error("General title should not exceed 66 characters.");
+      alert("General title should not exceed 66 characters.");
       return false;
     }
     if (general.description.length > 165) {
-      toast.error("General description should not exceed 165 characters.");
+      alert("General description should not exceed 165 characters.");
       return false;
     }
     if (openGraph.title.length > 66) {
-      toast.error("OpenGraph title should not exceed 66 characters.");
+      alert("OpenGraph title should not exceed 66 characters.");
       return false;
     }
     if (openGraph.description.length > 165) {
-      toast.error("OpenGraph description should not exceed 165 characters.");
+      alert("OpenGraph description should not exceed 165 characters.");
       return false;
     }
     if (twitter.title.length > 66) {
-      toast.error("Twitter title should not exceed 66 characters.");
+      alert("Twitter title should not exceed 66 characters.");
       return false;
     }
     if (twitter.description.length > 165) {
-      toast.error("Twitter description should not exceed 165 characters.");
+      alert("Twitter description should not exceed 165 characters.");
       return false;
     }
     return true;

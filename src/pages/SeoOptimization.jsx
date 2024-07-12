@@ -147,6 +147,19 @@ const SeoOptimization = () => {
                 />
               </div>
               <div className="mb-2">
+                <label className="block mb-1">Description</label>
+                <div className="text-sm text-muted-foreground mb-1">
+                  {openGraph.description.length}/165
+                </div>
+                <Input
+                  value={openGraph.description}
+                  onChange={(e) =>
+                    handleChange("openGraph", "description", e.target.value)
+                  }
+                  maxLength={165}
+                />
+              </div>
+              <div className="mb-2">
                 <label className="block mb-1">Type</label>
                 <Input
                   value={openGraph.type}
@@ -167,19 +180,6 @@ const SeoOptimization = () => {
                   onChange={(e) =>
                     handleChange("openGraph", "image", e.target.value)
                   }
-                />
-              </div>
-              <div className="mb-2">
-                <label className="block mb-1">Description</label>
-                <div className="text-sm text-muted-foreground mb-1">
-                  {openGraph.description.length}/165
-                </div>
-                <Input
-                  value={openGraph.description}
-                  onChange={(e) =>
-                    handleChange("openGraph", "description", e.target.value)
-                  }
-                  maxLength={165}
                 />
               </div>
             </CardContent>

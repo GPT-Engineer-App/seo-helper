@@ -101,6 +101,9 @@ const SeoOptimization = () => {
         <CardContent>
           <div className="mb-2">
             <label className="block mb-1">Title</label>
+            <div className="text-sm text-muted-foreground mb-1">
+              {general.title.length}/66
+            </div>
             <Input
               value={general.title}
               onChange={(e) => handleChange("general", "title", e.target.value)}
@@ -109,6 +112,9 @@ const SeoOptimization = () => {
           </div>
           <div className="mb-2">
             <label className="block mb-1">Description</label>
+            <div className="text-sm text-muted-foreground mb-1">
+              {general.description.length}/165
+            </div>
             <Input
               value={general.description}
               onChange={(e) =>
@@ -129,6 +135,9 @@ const SeoOptimization = () => {
             <CardContent>
               <div className="mb-2">
                 <label className="block mb-1">Title</label>
+                <div className="text-sm text-muted-foreground mb-1">
+                  {openGraph.title.length}/66
+                </div>
                 <Input
                   value={openGraph.title}
                   onChange={(e) =>
@@ -162,6 +171,9 @@ const SeoOptimization = () => {
               </div>
               <div className="mb-2">
                 <label className="block mb-1">Description</label>
+                <div className="text-sm text-muted-foreground mb-1">
+                  {openGraph.description.length}/165
+                </div>
                 <Input
                   value={openGraph.description}
                   onChange={(e) =>
@@ -182,6 +194,9 @@ const SeoOptimization = () => {
             <CardContent>
               <div className="mb-2">
                 <label className="block mb-1">Title</label>
+                <div className="text-sm text-muted-foreground mb-1">
+                  {twitter.title.length}/66
+                </div>
                 <Input
                   value={twitter.title}
                   onChange={(e) => handleChange("twitter", "title", e.target.value)}
@@ -190,6 +205,9 @@ const SeoOptimization = () => {
               </div>
               <div className="mb-2">
                 <label className="block mb-1">Description</label>
+                <div className="text-sm text-muted-foreground mb-1">
+                  {twitter.description.length}/165
+                </div>
                 <Input
                   value={twitter.description}
                   onChange={(e) =>

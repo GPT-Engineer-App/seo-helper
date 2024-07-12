@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Toaster } from "@/components/ui/sonner";
+import { Textarea } from "@/components/ui/textarea";
 
 const SeoOptimization = () => {
   const [general, setGeneral] = useState({ title: "", description: "" });
@@ -128,12 +129,13 @@ const SeoOptimization = () => {
             <div className="text-sm text-muted-foreground mb-1">
               {general.description.length}/165
             </div>
-            <Input
+            <Textarea
               value={general.description}
               onChange={(e) =>
                 handleChange("general", "description", e.target.value)
               }
               maxLength={165}
+              rows={2}
             />
           </div>
           <Button onClick={copyGeneralToOthers} className="mt-2">
@@ -167,12 +169,13 @@ const SeoOptimization = () => {
                 <div className="text-sm text-muted-foreground mb-1">
                   {openGraph.description.length}/165
                 </div>
-                <Input
+                <Textarea
                   value={openGraph.description}
                   onChange={(e) =>
                     handleChange("openGraph", "description", e.target.value)
                   }
                   maxLength={165}
+                  rows={2}
                 />
               </div>
               <div className="mb-2">
@@ -224,12 +227,13 @@ const SeoOptimization = () => {
                 <div className="text-sm text-muted-foreground mb-1">
                   {twitter.description.length}/165
                 </div>
-                <Input
+                <Textarea
                   value={twitter.description}
                   onChange={(e) =>
                     handleChange("twitter", "description", e.target.value)
                   }
                   maxLength={165}
+                  rows={2}
                 />
               </div>
               <div className="flex gap-2 mb-2">

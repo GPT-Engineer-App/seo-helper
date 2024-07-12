@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Toaster } from "@/components/ui/sonner";
 import { Textarea } from "@/components/ui/textarea";
-import { GearIcon, GlobeIcon, MarkGithubIcon } from "@primer/octicons-react";
+import { GearIcon, GlobeIcon, MarkGithubIcon, XIcon } from "@primer/octicons-react";
 
 const SeoOptimization = () => {
   const [general, setGeneral] = useState({ title: "", description: "" });
@@ -216,7 +216,7 @@ const SeoOptimization = () => {
           <Card>
             <CardHeader>
               <h2 className="text-xl font-semibold flex items-center">
-                <MarkGithubIcon size={24} className="mr-2" />
+                <XIcon size={24} className="mr-2" />
                 Twitter Settings
               </h2>
             </CardHeader>

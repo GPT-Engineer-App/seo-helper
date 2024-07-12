@@ -90,7 +90,10 @@ const SeoOptimization = () => {
       },
     };
 
-    setMarkup(JSON.stringify(seoData, null, 2));
+    const formattedMarkup = JSON.stringify(seoData, null, 2)
+      .replace(/"([^"]+)":/g, '$1:');
+
+    setMarkup(formattedMarkup);
   };
 
   const copyGeneralToOthers = () => {

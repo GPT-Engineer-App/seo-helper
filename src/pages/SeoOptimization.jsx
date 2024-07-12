@@ -109,6 +109,14 @@ const SeoOptimization = () => {
     }));
   };
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(markup).then(() => {
+      alert("Markup copied to clipboard!");
+    }).catch((err) => {
+      console.error("Failed to copy: ", err);
+    });
+  };
+
   return (
     <div className="container mx-auto p-4">
       <Toaster />
@@ -294,6 +302,7 @@ const SeoOptimization = () => {
         <div className="mt-4">
           <h2 className="text-xl font-semibold">Generated Markup</h2>
           <pre className="bg-gray-100 p-4 rounded">{markup}</pre>
+          <Button onClick={copyToClipboard} className="mt-2">Copy Markup</Button>
         </div>
       )}
     </div>

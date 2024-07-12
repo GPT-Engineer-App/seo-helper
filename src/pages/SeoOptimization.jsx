@@ -91,6 +91,19 @@ const SeoOptimization = () => {
     setMarkup(JSON.stringify(seoData, null, 2));
   };
 
+  const copyGeneralToOthers = () => {
+    setOpenGraph((prev) => ({
+      ...prev,
+      title: general.title,
+      description: general.description,
+    }));
+    setTwitter((prev) => ({
+      ...prev,
+      title: general.title,
+      description: general.description,
+    }));
+  };
+
   return (
     <div className="container mx-auto p-4">
       <Toaster />
@@ -123,6 +136,9 @@ const SeoOptimization = () => {
               maxLength={165}
             />
           </div>
+          <Button onClick={copyGeneralToOthers} className="mt-2">
+            Copy to OpenGraph and Twitter
+          </Button>
         </CardContent>
       </Card>
 

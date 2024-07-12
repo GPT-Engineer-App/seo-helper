@@ -8,18 +8,18 @@ const SeoOptimization = () => {
   const [general, setGeneral] = useState({ title: "", description: "" });
   const [openGraph, setOpenGraph] = useState({
     title: "",
-    type: "",
-    url: "",
-    image: "",
+    type: "website",
+    url: "https://lovable.dev",
+    image: "https://lovable.dev/lovable-open-graph.png",
     description: "",
   });
   const [twitter, setTwitter] = useState({
     title: "",
     description: "",
-    creator: "",
-    card: "",
-    image: "",
-    imageAlt: "",
+    creator: "@Lovable_dev",
+    card: "summary_large_image",
+    image: "https://lovable.dev/lovable-open-graph.png",
+    imageAlt: "Lovable",
   });
   const [markup, setMarkup] = useState("");
 

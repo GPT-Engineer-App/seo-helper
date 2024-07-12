@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Toaster } from "@/components/ui/sonner";
 import { Textarea } from "@/components/ui/textarea";
+import { GearIcon, GlobeIcon, MarkGithubIcon } from "@primer/octicons-react";
 
 const SeoOptimization = () => {
   const [general, setGeneral] = useState({ title: "", description: "" });
@@ -110,7 +111,10 @@ const SeoOptimization = () => {
       <Toaster />
       <Card className="mb-4">
         <CardHeader>
-          <h2 className="text-xl font-semibold">General Settings</h2>
+          <h2 className="text-xl font-semibold flex items-center">
+            <GearIcon size={24} className="mr-2" />
+            General Settings
+          </h2>
         </CardHeader>
         <CardContent>
           <div className="mb-2">
@@ -148,7 +152,10 @@ const SeoOptimization = () => {
         <div className="w-full md:w-1/2 px-2 mb-4">
           <Card>
             <CardHeader>
-              <h2 className="text-xl font-semibold">OpenGraph Settings</h2>
+              <h2 className="text-xl font-semibold flex items-center">
+                <GlobeIcon size={24} className="mr-2" />
+                OpenGraph Settings
+              </h2>
             </CardHeader>
             <CardContent>
               <div className="mb-2">
@@ -208,7 +215,10 @@ const SeoOptimization = () => {
         <div className="w-full md:w-1/2 px-2 mb-4">
           <Card>
             <CardHeader>
-              <h2 className="text-xl font-semibold">Twitter Settings</h2>
+              <h2 className="text-xl font-semibold flex items-center">
+                <MarkGithubIcon size={24} className="mr-2" />
+                Twitter Settings
+              </h2>
             </CardHeader>
             <CardContent>
               <div className="mb-2">

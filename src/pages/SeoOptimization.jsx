@@ -216,21 +216,23 @@ const SeoOptimization = () => {
                   maxLength={165}
                 />
               </div>
-              <div className="mb-2">
-                <label className="block mb-1">Creator</label>
-                <Input
-                  value={twitter.creator}
-                  onChange={(e) =>
-                    handleChange("twitter", "creator", e.target.value)
-                  }
-                />
-              </div>
-              <div className="mb-2">
-                <label className="block mb-1">Card</label>
-                <Input
-                  value={twitter.card}
-                  onChange={(e) => handleChange("twitter", "card", e.target.value)}
-                />
+              <div className="flex gap-2 mb-2">
+                <div className="flex-1">
+                  <label className="block mb-1">Creator</label>
+                  <Input
+                    value={twitter.creator}
+                    onChange={(e) =>
+                      handleChange("twitter", "creator", e.target.value)
+                    }
+                  />
+                </div>
+                <div className="flex-1">
+                  <label className="block mb-1">Card</label>
+                  <Input
+                    value={twitter.card}
+                    onChange={(e) => handleChange("twitter", "card", e.target.value)}
+                  />
+                </div>
               </div>
               <div className="mb-2">
                 <label className="block mb-1">Image</label>
